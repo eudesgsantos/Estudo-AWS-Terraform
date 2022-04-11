@@ -1,20 +1,15 @@
 provider "aws" {
-    region = "us-west-2"
+    region = "us-west-1"
 }
 
 terraform {
     backend "s3" {
         key = "terraform/tfstate.tfstate"
-        bucket = "esantos-remote-backend"
-        region = "us-west-2"
+        bucket = "remote-backend"
+        region = "us-west-1"
         access_key = "x"
         secret_key = "x"
     }
-}
-
-
-module "iam" {
-    source = "./iam"
 }
 
 module "network" {
@@ -23,7 +18,7 @@ module "network" {
 
 module "security" {
     source = "./security"
-    esantosVPC = module.network.esantosVPC 
+    VPC = module.network.VPC 
     depends_on = [module.network]
 }
 

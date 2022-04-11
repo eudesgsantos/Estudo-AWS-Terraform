@@ -14,7 +14,7 @@ output "subnetPublicB" {
     value = "${aws_subnet.subnetPublicB.id}"
 }
 
-output "esantosVPC"{
-    value = "${aws_vpc.esantosVPC.id}"
+output "VPC"{
+    value = "${aws_vpc.VPC.id}"
 }
 

@@ -1,7 +1,7 @@
 
 
 resource "aws_instance" "EC2Apache" {
-    ami = "ami-0892d3c7ee96c0bf7"
+    ami = "ami-01f87c43e618bf8f0"
     instance_type = "t3.micro"
     security_groups = [var.EC2PubSecGP]
     subnet_id = var.subnetPublicA
@@ -11,7 +11,7 @@ resource "aws_instance" "EC2Apache" {
 }
 
 resource "aws_instance" "EC2Back" {
-    ami = "ami-0892d3c7ee96c0bf7"
+    ami = "ami-01f87c43e618bf8f0"
     instance_type = "t3.micro"
     security_groups = [var.EC2PrivSecGP]
     subnet_id = var.subnetPrivateA
