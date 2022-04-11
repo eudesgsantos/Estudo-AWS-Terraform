@@ -1,0 +1,3 @@
+variable "esantosVPC" {
+    type = string
+}
